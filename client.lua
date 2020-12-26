@@ -164,7 +164,7 @@ Citizen.CreateThread(function()
             local curveh = GetVehiclePedIsTryingToEnter(PlayerPedId())
             local pedDriver = GetPedInVehicleSeat(curveh, -1)
             local plate = GetVehicleNumberPlateText(curveh)
-            if Keys[plate] ~= PlayerData.identifier and DoesEntityExist(pedDriver) and IsEntityDead(pedDriver) and not IsPedAPlayer(pedDriver)  then
+            if Keys[plate] ~= true and DoesEntityExist(pedDriver) and IsEntityDead(pedDriver) and not IsPedAPlayer(pedDriver)  then
                 wait = 1
                 exports["hsn-bar"]:taskBar(2000, 'Anahtar Alınıyor') 
                 TriggerServerEvent('hsn-hotwire:addKeys',plate)
